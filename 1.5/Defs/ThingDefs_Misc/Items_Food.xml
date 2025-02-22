@@ -1,0 +1,117 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<RecipeDef>
+		<defName>DA_RoastedMeat</defName>
+		<label>roast meat</label>
+		<description>roast meat.</description>
+		<jobString>Roasting meat.</jobString>
+		<workSpeedStat>CookSpeed</workSpeedStat>
+		<effectWorking>Cook</effectWorking>
+		<soundWorking>Recipe_CookMeal</soundWorking>
+		<allowMixingIngredients>true</allowMixingIngredients>
+		<ingredientValueGetterClass>IngredientValueGetter_Nutrition</ingredientValueGetterClass>
+		<workAmount>150</workAmount>
+		<ingredients>
+			<li>
+				<filter>
+				<customSummary>protein</customSummary>
+					<categories>
+						<li>MeatRaw</li>
+					</categories>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<products>
+			<DA_RoastedMeat>1</DA_RoastedMeat>
+		</products>
+		<fixedIngredientFilter>
+			<categories>
+				<li>MeatRaw</li>
+			</categories>
+		</fixedIngredientFilter>
+		<defaultIngredientFilter>
+			<categories>
+				<li>MeatRaw</li>
+			</categories>
+		</defaultIngredientFilter>
+		<workSkill>Cooking</workSkill>
+	</RecipeDef>
+
+	<ThingDef ParentName="MealCooked">
+		<defName>DA_RoastedMeat</defName>
+		<label>Roasted meat</label>
+		<description>A large piece of meat roasted over a fire.</description>
+		<graphicData>
+			<texPath>Things/WeaponMelee/RoastedLeg</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<equippedAngleOffset>-35</equippedAngleOffset>
+		
+		<statBases>
+			<WorkToMake>300</WorkToMake>
+			<Nutrition>1</Nutrition>
+		</statBases>
+		
+		<ingestible>
+			<preferability>MealSimple</preferability>
+			<tasteThought>DA_AteRoastedMeat</tasteThought>
+			<optimalityOffsetHumanlikes>18</optimalityOffsetHumanlikes>
+			<optimalityOffsetFeedingAnimals>-30</optimalityOffsetFeedingAnimals>
+		</ingestible>
+		
+    <equipmentType>Primary</equipmentType>
+       <weaponTags>
+          <li>RoastedMeat</li>
+        </weaponTags>
+    <techLevel>Neolithic</techLevel>
+		
+    <comps>
+      <li>
+        <compClass>CompEquippable</compClass>
+      </li>
+    </comps>
+	
+    <weaponClasses>
+      <li>Melee</li>
+      <li>MeleeBlunt</li>
+    </weaponClasses>
+    <tools>
+      <li>
+        <label>meat</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>15</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+      <li>
+        <label>bone</label>
+        <capacities>
+          <li>Poke</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>2</cooldownTime>
+      </li>
+    </tools>
+
+		<rotatable>true</rotatable>
+	</ThingDef>
+	
+	<ThoughtDef>
+		<defName>DA_AteRoastedMeat</defName>
+		<showBubble>true</showBubble>
+		<icon>Things/Mote/ThoughtSymbol/Food</icon>
+		<durationDays>0.5</durationDays>
+		<stackLimit>1</stackLimit>
+		<stages>
+			<li>
+				<label>ate roasted meat</label>
+				<description>A tasty piece of roasted meat.</description>
+				<baseMoodEffect>2</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+</Defs>

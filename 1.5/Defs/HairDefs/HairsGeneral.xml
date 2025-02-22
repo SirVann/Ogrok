@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <styleItemCategoryDef>
+     <defName>Ogrok</defName>
+     <label>ogrok</label>
+  </styleItemCategoryDef>
+
+  <BeardDef Name="OgrokBeardBase" Abstract="True">
+    <requiredGene>DA_Jaw_FatChin</requiredGene>
+    <styleGender>Male</styleGender>
+    <category>Ogrok</category>
+    <styleTags>
+      <li>DA_OgrokBeard</li>
+      <li>BeardRural</li>
+      <li>BeardTribal</li>
+    </styleTags>
+  </BeardDef>
+
+  <BeardDef ParentName="OgrokBeardBase">
+    <defName>DA_Baron</defName>
+    <label>baron</label>
+    <texPath>Things/Pawn/Humanlike/Beards/Baron</texPath>
+  </BeardDef>
+  
+  <BeardDef ParentName="OgrokBeardBase">
+    <defName>DA_Greasus</defName>
+    <label>greasus</label>
+    <texPath>Things/Pawn/Humanlike/Beards/Greasus</texPath>
+  </BeardDef>
+  
+   <BeardDef ParentName="OgrokBeardBase">
+    <defName>DA_Shanker</defName>
+    <label>shanker</label>
+    <texPath>Things/Pawn/Humanlike/Beards/Shanker</texPath>
+  </BeardDef>
+  
+   <BeardDef ParentName="OgrokBeardBase">
+    <defName>DA_Butcher</defName>
+    <label>butcher</label>
+    <texPath>Things/Pawn/Humanlike/Beards/Butcher</texPath>
+  </BeardDef>
+
+  <BeardDef ParentName="OgrokBeardBase">
+    <defName>DA_Minichops</defName>
+    <label>minichops</label>
+    <texPath>Things/Pawn/Humanlike/Beards/Minichops</texPath>
+  </BeardDef>
+  
+    <BeardDef ParentName="OgrokBeardBase">
+    <defName>DA_Handyman</defName>
+    <label>handyman</label>
+    <texPath>Things/Pawn/Humanlike/Beards/Handyman</texPath>
+  </BeardDef>
+
+    <BeardDef ParentName="OgrokBeardBase">
+    <defName>DA_OldBoar</defName>
+    <label>oldboar</label>
+    <texPath>Things/Pawn/Humanlike/Beards/OldBoar</texPath>
+  </BeardDef>
+
+    <BeardDef ParentName="OgrokBeardBase">
+    <defName>DA_Neckbeard</defName>
+    <label>neckbeard</label>
+    <texPath>Things/Pawn/Humanlike/Beards/Neckbeard</texPath>
+  </BeardDef>
+  
+    <BeardDef ParentName="OgrokBeardBase">
+    <defName>DA_Walrus</defName>
+    <label>walrus</label>
+    <texPath>Things/Pawn/Humanlike/Beards/Walrus</texPath>
+  </BeardDef>
+  
+    <BeardDef ParentName="OgrokBeardBase">
+    <defName>DA_Mercenary</defName>
+    <label>mercenary</label>
+    <texPath>Things/Pawn/Humanlike/Beards/Mercenary</texPath>
+  </BeardDef>
+</Defs>

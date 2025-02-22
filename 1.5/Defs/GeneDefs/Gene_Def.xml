@@ -1,0 +1,474 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <GeneDef>
+    <defName>DA_Jaw_FatChin</defName>
+    <label>fatchin</label>
+    <description>Carriers of this gene grow a massive sack of grease beneath their chin.</description>
+    <iconPath>UI/Genes/Gene_FatChin</iconPath>
+	
+    <renderNodeProperties>
+      <li>
+        <nodeClass>PawnRenderNode_AttachmentHead</nodeClass>
+        <workerClass>PawnRenderNodeWorker_FlipWhenCrawling</workerClass>
+        <parentTagDef>Head</parentTagDef>
+        <texPath>Things/Pawn/Humanlike/HeadAttachments/Fatchin/Fatchin</texPath>
+        <narrowCrownHorizontalOffset>0.03</narrowCrownHorizontalOffset>
+        <useSkinShader>true</useSkinShader>
+        <useRottenColor>true</useRottenColor>
+        <colorType>Skin</colorType>
+        <rotDrawMode>Fresh, Rotting</rotDrawMode>
+        <visibleFacing>
+          <li>East</li>
+          <li>South</li>
+		  <li>North</li>
+          <li>West</li>
+        </visibleFacing>
+        <drawData>
+          <defaultData>
+            <layer>52</layer>
+          </defaultData>
+        </drawData>
+      </li>
+    </renderNodeProperties>
+	
+    <beardTagFilter>
+      <whitelist>true</whitelist>
+      <tags>
+        <li>DA_OgrokBeard</li>
+		<li>NoBeard</li>
+      </tags>
+    </beardTagFilter>
+	
+    <biostatCpx>0</biostatCpx>
+    <endogeneCategory>Jaw</endogeneCategory>
+    <displayCategory>Cosmetic</displayCategory>
+    <randomChosen>true</randomChosen>
+    <iconColor>(0.75, 0.75, 0.75)</iconColor>
+    <displayOrderInCategory>410</displayOrderInCategory>
+	
+    <symbolPack>
+      <prefixSymbols>
+        <li><symbol>fat</symbol></li>
+        <li><symbol>heavy</symbol></li>
+        <li><symbol>grease</symbol></li>
+      </prefixSymbols>
+      <suffixSymbols>
+        <li><symbol>fat</symbol></li>
+        <li><symbol>chub</symbol></li>
+        <li><symbol>heavy</symbol></li>
+        <li><symbol>grease</symbol></li>
+        <li><symbol>neck</symbol></li>
+        <li><symbol>chin</symbol></li>
+      </suffixSymbols>
+    </symbolPack>
+	
+  </GeneDef>
+
+  <GeneDef>
+    <defName>DA_LargeMolars</defName>
+    <label>large molars</label>
+    <description>Carriers of this gene have large molars that facilitate the consumption of food.</description>
+    <iconPath>UI/Genes/Gene_LargeMolars</iconPath>
+	
+    <renderNodeProperties>
+      <li>
+        <nodeClass>PawnRenderNode_AttachmentHead</nodeClass>
+        <workerClass>PawnRenderNodeWorker_FlipWhenCrawling</workerClass>
+        <parentTagDef>Head</parentTagDef>
+        <colorType>Skin</colorType>
+        <useRottenColor>true</useRottenColor>
+        <useSkinShader>true</useSkinShader>
+        <rotDrawMode>Fresh, Rotting</rotDrawMode>
+       <texPath>Things/Pawn/Humanlike/HeadAttachments/LargeMolars/Molars</texPath> 
+      <drawData>
+        <defaultData>
+          <layer>65</layer>
+        </defaultData>
+        <dataNorth>
+          <layer>10</layer>
+        </dataNorth>
+      </drawData>
+    </li>
+  </renderNodeProperties>
+  <iconColor>(0.75, 0.75, 0.75)</iconColor>
+  
+    <displayCategory>Cosmetic</displayCategory>
+    <displayOrderInCategory>410</displayOrderInCategory>
+	
+    <statOffsets>
+      <EatingSpeed>0.10</EatingSpeed>
+    </statOffsets>
+	
+    <symbolPack>
+      <prefixSymbols>
+        <li><symbol>teeth</symbol></li>
+        <li><symbol>molar</symbol></li>
+        <li><symbol>jaw</symbol></li>
+        <li><symbol>chew</symbol></li>
+      </prefixSymbols>
+      <suffixSymbols>
+        <li><symbol>teeth</symbol></li>
+        <li><symbol>molar</symbol></li>
+        <li><symbol>jaw</symbol></li>
+        <li><symbol>chew</symbol></li>
+      </suffixSymbols>
+    </symbolPack>
+	
+  </GeneDef>
+  
+  <GeneDef ParentName="GeneEarsBase">
+    <defName>DA_Ears_Jagged</defName>
+    <label>jagged ears</label>
+    <description>Carriers of this gene will grow jagged ears.</description>
+    <iconPath>UI/Genes/Gene_EarJagged</iconPath>
+    <renderNodeProperties>
+      <li>
+        <nodeClass>PawnRenderNode_AttachmentHead</nodeClass>
+        <workerClass>PawnRenderNodeWorker_FlipWhenCrawling</workerClass>
+        <texPath>Things/Pawn/Humanlike/HeadAttachments/JaggedEars/JaggedEars</texPath>
+        <colorType>Skin</colorType>
+        <parentTagDef>Head</parentTagDef>
+        <useSkinShader>true</useSkinShader>
+        <useRottenColor>true</useRottenColor>
+        <rotDrawMode>Fresh, Rotting</rotDrawMode>
+        <drawData>
+          <defaultData>
+            <layer>70</layer>
+          </defaultData>
+        <dataSouth>
+          <layer>51</layer>
+        </dataSouth>
+        <dataNorth>
+          <layer>51</layer>
+        </dataNorth>
+        </drawData>
+      </li>
+    </renderNodeProperties>
+    <symbolPack>
+      <prefixSymbols>
+        <li><symbol>jagged</symbol></li>
+        <li><symbol>pointy</symbol></li>
+      </prefixSymbols>
+      <suffixSymbols>
+        <li><symbol>jagged</symbol></li>
+        <li><symbol>pointy</symbol></li>
+        <li><symbol>ear</symbol></li>
+      </suffixSymbols>
+    </symbolPack>
+  </GeneDef>
+  
+  
+   <HeadTypeDef ParentName="AverageBase">
+    <defName>DA_GreasyHead_Male</defName>
+    <graphicPath>Things/Pawn/Humanlike/HeadAttachments/GreasyBrow/GreasyBrow</graphicPath>
+    <randomChosen>false</randomChosen>
+    <gender>Male</gender>
+    <requiredGenes>
+      <li>DA_GreasyBrow</li>
+    </requiredGenes>
+  </HeadTypeDef>
+  
+   <HeadTypeDef ParentName="AverageBase">
+    <defName>DA_GreasyHead_Female</defName>
+    <graphicPath>Things/Pawn/Humanlike/HeadAttachments/GreasyBrow/GreasyBrow</graphicPath>
+    <randomChosen>false</randomChosen>
+    <gender>Female</gender>
+    <requiredGenes>
+      <li>DA_GreasyBrow</li>
+    </requiredGenes>
+  </HeadTypeDef>
+  
+  <GeneDef>
+    <defName>DA_GreasyBrow</defName>
+    <label>greasy brow</label>
+    <description>Carriers of this gene have a greasy brow.</description>
+    <biostatCpx>0</biostatCpx>
+    <displayCategory>Cosmetic</displayCategory>
+    <iconPath>UI/Genes/Gene_GreasyBrow</iconPath>
+    <displayOrderInCategory>100</displayOrderInCategory>
+    <iconColor>(0.75, 0.75, 0.75)</iconColor>
+    <forcedHeadTypes>
+      <li>DA_GreasyHead_Male</li>
+	  <li>DA_GreasyHead_Female</li>
+    </forcedHeadTypes>
+  </GeneDef>
+  
+    <GeneDef ParentName="GeneHandsBase">
+    <defName>DV_LargeHands</defName>
+    <label>large hands</label>
+    <iconPath>UI/Genes/Gene_HandsLarge</iconPath>
+	<geneClass>EBSGFramework.HediffAdder</geneClass>
+    <description>Carriers of this gene have large obstructing hands. This reduces their ability to manipulate objects but grants them the upperhand in a fistfight. </description>
+    <displayCategory>Miscellaneous</displayCategory>
+    <displayOrderInCategory>50</displayOrderInCategory>
+	
+    <capMods>
+      <li>
+        <capacity>Manipulation</capacity>
+        <postFactor>0.95</postFactor>
+      </li>
+    </capMods>
+        <customEffectDescriptions>
+            <li>Grants a special melee attack.</li>
+        </customEffectDescriptions>
+    <biostatCpx>1</biostatCpx>
+	
+        <modExtensions>
+	    <li Class="EBSGFramework.EBSGExtension">
+                <hediffsToApply>
+                    <li>
+                        <hediff>DA_LargeHands</hediff>
+                    </li>
+                </hediffsToApply>
+            </li>
+	</modExtensions>
+	
+    <symbolPack>
+      <prefixSymbols>
+        <li><symbol>large</symbol></li>
+        <li><symbol>obstructing</symbol></li>
+      </prefixSymbols>
+      <suffixSymbols>
+        <li><symbol>hands</symbol></li>
+		<li><symbol>fingers</symbol></li>
+      </suffixSymbols>
+    </symbolPack>
+  </GeneDef>
+  
+  <HediffDef>
+    <defName>DA_LargeHands</defName>
+    <label>heavy blow</label>
+    <description>You shouldn't be able to read that.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <scenarioCanAdd>false</scenarioCanAdd>
+	
+    <maxSeverity>1.0</maxSeverity>
+	<stages>
+	 <li>
+	      <becomeVisible>false</becomeVisible>
+	 </li>
+	</stages>
+	
+    <comps>
+        <li Class="HediffCompProperties_VerbGiver">
+            <tools>
+                <li>
+                  <label>large fist</label>
+                  <capacities>
+                    <li>Blunt</li>
+                  </capacities>
+                  <power>14</power>
+                  <soundMeleeHit>Pawn_Melee_BigBash_HitPawn</soundMeleeHit>
+                  <cooldownTime>3</cooldownTime>
+                </li>
+            </tools>
+        </li>  
+    </comps>
+    <addedPartProps>
+        <betterThanNatural>true</betterThanNatural>
+    </addedPartProps>
+    <isBad>false</isBad>
+  </HediffDef>
+  
+    <GeneDef>
+    <defName>DA_LargeStomach</defName>
+    <label>large stomach</label>
+    <iconPath>UI/Genes/Gene_LargeStomach</iconPath>
+    <description>Carriers of this gene have a larger stomach capable of holding and digesting more food.</description>
+    <displayCategory>Miscellaneous</displayCategory>
+    <displayOrderInCategory>50</displayOrderInCategory>
+    <statOffsets>
+      <MaxNutrition>1</MaxNutrition>
+    </statOffsets>
+    <biostatCpx>1</biostatCpx>
+    <biostatMet>-1</biostatMet>
+    <symbolPack>
+      <prefixSymbols>
+        <li><symbol>large</symbol></li>
+        <li><symbol>gargantuan</symbol></li>
+      </prefixSymbols>
+      <suffixSymbols>
+        <li><symbol>stomach</symbol></li>
+      </suffixSymbols>
+    </symbolPack>
+  </GeneDef>
+  
+      <GeneDef>
+    <defName>DA_Jolly</defName>
+    <label>jolly</label>
+    <iconPath>UI/Genes/Gene_Jolly</iconPath>
+    <description>Carriers of this gene are jolly by nature and will remain joyous for longer periods of time</description>
+    <displayCategory>Mood</displayCategory>
+    <displayOrderInCategory>50</displayOrderInCategory>
+    <statFactors>
+      <JoyFallRateFactor>0.5</JoyFallRateFactor>
+    </statFactors>
+    <biostatCpx>1</biostatCpx>
+    <biostatMet>-1</biostatMet>
+    <symbolPack>
+      <prefixSymbols>
+        <li><symbol>joy</symbol></li>
+        <li><symbol>jolly</symbol></li>
+      </prefixSymbols>
+      <suffixSymbols>
+        <li><symbol>happy</symbol></li>
+		<li><symbol>jolly</symbol></li>
+      </suffixSymbols>
+    </symbolPack>
+  </GeneDef>
+  
+   <GeneDef>
+    <defName>DA_Filthy</defName>
+    <label>filthy</label>
+    <iconPath>UI/Genes/Gene_Dirty</iconPath>
+    <description>Carriers of this gene are naturally filthy and produce twice the amount of filth in a day.</description>
+    <displayCategory>Miscellaneous</displayCategory>
+    <displayOrderInCategory>50</displayOrderInCategory>
+		<statFactors>
+			<FilthRate>2</FilthRate>
+		</statFactors>
+    <biostatCpx>1</biostatCpx>
+    <biostatMet>1</biostatMet>
+  </GeneDef>
+  
+    <GeneDef>
+    <defName>DA_Voracious</defName>
+    <label>voracious</label>
+    <iconPath>UI/Genes/Gene_Voracious</iconPath>
+    <description>Carriers of this gene become stronger and faster when hungry.</description>
+    <displayCategory>Violence</displayCategory>
+    <displayOrderInCategory>50</displayOrderInCategory>
+    <biostatCpx>1</biostatCpx>
+    <biostatMet>-3</biostatMet>
+	
+        <conditionalStatAffecters>	
+            <li Class="EBSGFramework.ConditionalStatAffecter_Needs">
+                <label>Voracious</label>
+				
+                <statOffsets>
+                  <EatingSpeed>1</EatingSpeed>
+				  <MoveSpeed>0.5</MoveSpeed>
+                </statOffsets>
+				
+				<statFactors>
+                  <IncomingDamageFactor>0.3</IncomingDamageFactor>
+				  <StaggerDurationFactor>0</StaggerDurationFactor>
+                </statFactors>
+				
+                <needLevels>
+                    <li>
+                       <need>Food</need>
+                       <minNeedLevel>0</minNeedLevel>
+                       <maxNeedLevel>0.35</maxNeedLevel>
+                    </li>
+                </needLevels>
+            </li>
+        </conditionalStatAffecters>
+	
+    <symbolPack>
+      <prefixSymbols>
+        <li><symbol>ravenous</symbol></li>
+        <li><symbol>hungry</symbol></li>
+      </prefixSymbols>
+      <suffixSymbols>
+        <li><symbol>voracious</symbol></li>
+      </suffixSymbols>
+    </symbolPack>
+  </GeneDef>
+  
+  <GeneDef ParentName="GeneSkinColorOverride">
+    <defName>DA_Skin_PalePink</defName>
+    <label>pale pink skin</label>
+    <labelShortAdj></labelShortAdj>
+    <description>Carriers of this gene produce a pigment that gives their skin a pale pink color.</description>
+    <randomBrightnessFactor>0</randomBrightnessFactor>
+    <skinColorOverride>(229,212,207)</skinColorOverride>
+    <displayOrderInCategory>0</displayOrderInCategory>
+  </GeneDef> 
+  
+ 
+  
+  
+  <!-- Need and hediff -->
+  
+    <HediffDef>
+    <defName>DA_MeatCraving</defName>
+    <label>meat dependency</label>
+    <description>This person has a genetically-induced biochemical dependency on meat. Without regular portions, their body cannot maintain itself in a healthy state and they will suffer degrading health and mood until they die.\n\nTakes effect after age: 13.</description>
+    <hediffClass>EBSGFramework.Hediff_Dependency</hediffClass>
+    <defaultLabelColor>(178, 89, 87)</defaultLabelColor>
+    <everCurableByItem>false</everCurableByItem>
+    <initialSeverity>0</initialSeverity>
+    <maxSeverity>12</maxSeverity>
+    <lethalSeverity>12</lethalSeverity>
+    <stages>
+      <li>
+        <becomeVisible>false</becomeVisible>
+      </li>
+      <li>
+        <minSeverity>0.001</minSeverity>
+        <becomeVisible>true</becomeVisible>
+      </li>
+      <li>
+        <label>craving</label>
+		<hungerRateFactorOffset>0.3</hungerRateFactorOffset>
+        <minSeverity>1</minSeverity>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <setMax>0.8</setMax>
+          </li>
+          <li>
+            <capacity>Moving</capacity>
+            <setMax>0.8</setMax>
+          </li>
+        </capMods>
+      </li>
+      <li>
+        <overrideLabel>blind rage</overrideLabel>
+        <minSeverity>6</minSeverity>
+        <mentalStateGivers>
+          <li>
+            <mentalState>Berserk</mentalState>
+          </li>
+        </mentalStateGivers>
+      </li>
+    </stages>
+	
+	    <comps>
+            <li Class="HediffCompProperties_SeverityPerDay">
+                <severityPerDay>0.4</severityPerDay> 
+                <minAge>13</minAge>
+            </li>
+        </comps>
+  </HediffDef>
+  
+      <GeneDef>
+        <defName>DA_MeatDependency</defName>
+        <label>meat dependency</label>
+        <description>Carriers of this gene need to eat meat in order to survive. After 2 days without meat, carriers will suffer increased hunger. After 15 days they will enter a blind rage. After 30 days, they will die</description> 
+        <geneClass>EBSGFramework.Gene_Dependency</geneClass>
+        <displayCategory>Drugs</displayCategory>
+        <minAgeActive>13</minAgeActive>
+        <labelShortAdj>meat-dependent</labelShortAdj>
+        <displayOrderInCategory>101</displayOrderInCategory>
+        <iconPath>UI/Genes/Gene_CarnivorousMetabolism</iconPath>
+        <biostatMet>4</biostatMet>
+        <exclusionTags>
+            <li>DA_MeatDependency</li>
+        </exclusionTags>
+        <modExtensions>
+            <li Class="EBSGFramework.IDGExtension">
+                <dependencyHediff>DA_MeatCraving</dependencyHediff>
+                <dependencyLabel>meat</dependencyLabel>
+                <validCategories>
+                    <li>MeatRaw</li>
+                </validCategories>
+                <checkIngredients>True</checkIngredients>
+                <minSatisfySeverity>0.9</minSatisfySeverity>
+            </li>
+        </modExtensions>
+    </GeneDef>
+
+
+</Defs>

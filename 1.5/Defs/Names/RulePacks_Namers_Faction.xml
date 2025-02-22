@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!-- Yttakin -->
+
+  <RulePackDef>
+    <defName>DA_OgrokUtility</defName>
+    <rulePack>
+      <rulesStrings>
+        <li>placeNameCore->[SylY][placeEnd]</li>
+        <li>placeNameCore->[SylY][SylY][placeEnd]</li>
+
+        <li>placeEnd->-gorok</li>
+        <li>placeEnd->-oro</li>
+        <li>placeEnd->-drok</li>
+        <li>placeEnd->-kork</li>
+        <li>placeEnd->-uruk</li>
+        <li>placeEnd->-basak</li>
+        <li>placeEnd->-imgar</li>
+        <li>placeEnd->-torgam</li>
+        <li>placeEnd->-forak</li>
+        <li>placeEnd->-graham</li>
+        <li>placeEnd->-trahak</li>
+        <li>placeEnd->-gur</li>
+        <li>placeEnd->-dur</li>
+        <li>placeEnd->-yivrak</li>
+        <li>placeEnd->-rak</li>
+        <li>placeEnd->-nosar</li>
+        <li>placeEnd->-ekar</li>
+      </rulesStrings>
+      <rulesFiles>
+        <li>SylY->WordParts/Syllables_Yttakin</li>
+      </rulesFiles>
+    </rulePack>
+  </RulePackDef>
+
+  <RulePackDef>
+    <defName>DA_NamerFactionOgrok</defName>
+    <include>
+      <li>DA_OgrokUtility</li>
+    </include>
+    <rulePack>
+      <rulesStrings>
+        <li>r_name(p=2)->[placeNameCore]</li>
+        <li>r_name->[placeNameCore] [faction]</li>
+        <li>r_name->[faction] of [placeNameCore]</li>
+
+        <li>faction->warband</li>
+        <li>faction->clan</li>
+        <li>faction->family-clan</li>
+        <li>faction->warclan</li>
+        <li>faction->horde</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+  <RulePackDef>
+    <defName>DA_NamerSettlementOgrok</defName>
+    <include>
+      <li>DA_OgrokUtility</li>
+    </include>
+    <rulePack>
+      <rulesStrings>
+        <li>r_name->[placeNameCore]</li>
+      </rulesStrings>
+    </rulePack>
+  </RulePackDef>
+
+</Defs>

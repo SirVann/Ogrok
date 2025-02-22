@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+<XenotypeDef>
+  <defName>DA_Ogrok</defName>
+  <label>ogrok</label>
+  <combatPowerFactor>1.4</combatPowerFactor>
+  <description>desc.</description>
+  <descriptionShort>desc.</descriptionShort>
+  <iconPath>UI/Xenotypes/Grogers</iconPath>
+  <inheritable>true</inheritable>
+  <nameMaker>NamerPersonOgrok</nameMaker>
+  <chanceToUseNameMaker>999</chanceToUseNameMaker>
+  <genes>
+    <li>DA_Jaw_FatChin</li>
+    <li>DA_LargeMolars</li>
+    <li>DA_Ears_Jagged</li>
+    <li>DA_GreasyBrow</li>
+    <li>DV_LargeHands</li>
+    <li>DA_LargeStomach</li>
+    <li>DA_Jolly</li>
+    <li>DA_Filthy</li>
+    <li>DA_Voracious</li>
+    <li>DA_MeatDependency</li>
+    <li>Body_Fat</li>
+	<li>DA_Skin_PalePink</li>
+    <li>AptitudeRemarkable_Melee</li>
+    <li>AptitudeRemarkable_Cooking</li>
+    <li>AptitudeStrong_Animals</li>
+    <li>AptitudePoor_Plants</li>
+	<li>AptitudeTerrible_Intellectual</li>
+	<li>StrongStomach</li>
+	<li>MoveSpeed_Slow</li>
+	<li>Beauty_Ugly</li>
+	<li>Learning_Slow</li>
+	<li>Mood_Sanguine</li>
+	<li>MeleeDamage_Strong</li>
+	<li>Hair_BaldOnly</li>
+  </genes>
+</XenotypeDef>
+
+</Defs>

@@ -1,0 +1,429 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<ThingDef ParentName="BaseMeleeWeapon_Sharp_Quality">
+		<defName>DA_MeleeWeapon_GreatCleaver</defName>
+		<label>great cleaver</label>
+		<description>A great cleaver originally designed as a butchering tool. Large and unwieldy it is a crude weapon which can deliver gruesome blows.</description>
+		<graphicData>
+			<texPath>Things/WeaponMelee/GreatCleaver</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>CutoutComplex</shaderType>
+			<drawSize>(1.2,1.2)</drawSize>
+		</graphicData>
+		<techLevel>Medieval</techLevel>
+		<equippedAngleOffset>-45</equippedAngleOffset>
+
+		<statBases>
+			<WorkToMake>16000</WorkToMake>
+			<Mass>3.75</Mass>
+		</statBases>
+
+		<costStuffCount>110</costStuffCount>
+		<stuffCategories>
+			<li>Metallic</li>
+		</stuffCategories>
+		<costList>
+			<WoodLog>30</WoodLog>
+		</costList>
+		
+	<equippedStatOffsets>
+        <ButcheryFleshSpeed>0.25</ButcheryFleshSpeed>
+        <ButcheryFleshEfficiency>0.15</ButcheryFleshEfficiency>
+	</equippedStatOffsets>
+
+		<weaponTags>
+			<li>MedievalMeleeDecent</li>
+			<li>OgrokCleaver</li>
+		</weaponTags>
+		
+		<modExtensions>
+			<li MayRequire="Van.DATools" Class="ShowTools.ToolExtension">
+				<workGiverDefs>
+					<li>DoBillsButcherFlesh</li>
+				</workGiverDefs>
+			</li>
+		</modExtensions>
+
+		<tools>
+			<li>
+				<label>handle</label>
+				<capacities>
+					<li>Blunt</li>
+					<li>Poke</li>
+				</capacities>
+				<power>11</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+			<li>
+				<label>edge</label>
+				<labelUsedInLogging>false</labelUsedInLogging>
+				<capacities>
+					<li>Cut</li>
+				</capacities>
+				<power>29</power>
+				<cooldownTime>3.5</cooldownTime>
+				<armorPenetration>0.4</armorPenetration>
+			</li>
+		</tools>
+		<recipeMaker>
+			<researchPrerequisite>LongBlades</researchPrerequisite>
+			<skillRequirements>
+				<Crafting>4</Crafting>
+			</skillRequirements>
+		</recipeMaker>
+	</ThingDef>
+	
+	<ThingDef ParentName="BaseMeleeWeapon_Sharp_Quality">
+		<defName>DA_MeleeWeapon_Gasher</defName>
+		<label>Gasher</label>
+		<description>A large rough-edged blade attached on a long wooden shaft. The gasher is a chimera of a weapon capable of slicing shields in half.</description>
+		<graphicData>
+			<texPath>Things/WeaponMelee/Gasher</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>CutoutComplex</shaderType>
+			<drawSize>(1.2,1.2)</drawSize>
+		</graphicData>
+		<techLevel>Medieval</techLevel>
+		<equippedAngleOffset>-45</equippedAngleOffset>
+
+		<statBases>
+			<WorkToMake>16000</WorkToMake>
+			<Mass>2.75</Mass>
+		</statBases>
+
+		<costStuffCount>80</costStuffCount>
+		<stuffCategories>
+			<li>Metallic</li>
+		</stuffCategories>
+		<costList>
+			<WoodLog>70</WoodLog>
+		</costList>
+
+		<weaponTags>
+			<li>MedievalMeleeDecent</li>
+			<li>OgrokCleaver</li>
+		</weaponTags>
+
+		<tools>
+			<li>
+				<label>shaft</label>
+				<capacities>
+					<li>Blunt</li>
+					<li>Poke</li>
+				</capacities>
+				<power>13</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+			<li>
+				<label>edge</label>
+				<labelUsedInLogging>false</labelUsedInLogging>
+				<capacities>
+					<li>Cut</li>
+				</capacities>
+				<power>25</power>
+				<cooldownTime>2.5</cooldownTime>
+				<armorPenetration>0.2</armorPenetration>
+			</li>
+		</tools>
+		<recipeMaker>
+			<researchPrerequisite>LongBlades</researchPrerequisite>
+			<skillRequirements>
+				<Crafting>4</Crafting>
+			</skillRequirements>
+		</recipeMaker>
+	</ThingDef>
+	
+		<ThingDef ParentName="BaseMeleeWeapon_Sharp_Quality">
+		<defName>DA_MeleeWeapon_MeatChopper</defName>
+		<label>meat chopper</label>
+		<description>A large cleaver used to chop meat and bones more efficiently.</description>
+		<graphicData>
+			<texPath>Things/WeaponMelee/Cleaver</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>CutoutComplex</shaderType>
+			<drawSize>(1.2,1.2)</drawSize>
+		</graphicData>
+		<techLevel>Medieval</techLevel>
+		<equippedAngleOffset>-45</equippedAngleOffset>
+
+		<statBases>
+			<WorkToMake>1000</WorkToMake>
+			<Mass>1.75</Mass>
+		</statBases>
+
+		<costStuffCount>60</costStuffCount>
+		<stuffCategories>
+			<li>Metallic</li>
+		</stuffCategories>
+		<costList>
+			<WoodLog>30</WoodLog>
+		</costList>
+		
+	<equippedStatOffsets>
+        <ButcheryFleshSpeed>0.20</ButcheryFleshSpeed>
+        <ButcheryFleshEfficiency>0.15</ButcheryFleshEfficiency>
+	</equippedStatOffsets>
+
+		<weaponTags>
+			<li>MedievalMeleeDecent</li>
+			<li>OgrokCleaver</li>
+		</weaponTags>
+		
+		<modExtensions>
+			<li MayRequire="Van.DATools" Class="ShowTools.ToolExtension">
+				<workGiverDefs>
+					<li>DoBillsButcherFlesh</li>
+				</workGiverDefs>
+			</li>
+		</modExtensions>
+
+		<tools>
+			<li>
+				<label>handle</label>
+				<capacities>
+					<li>Blunt</li>
+					<li>Poke</li>
+				</capacities>
+				<power>11</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+			<li>
+				<label>edge</label>
+				<labelUsedInLogging>false</labelUsedInLogging>
+				<capacities>
+					<li>Cut</li>
+				</capacities>
+				<power>20</power>
+				<cooldownTime>2.5</cooldownTime>
+			</li>
+		</tools>
+		<recipeMaker>
+			<researchPrerequisite>LongBlades</researchPrerequisite>
+			<skillRequirements>
+				<Crafting>4</Crafting>
+			</skillRequirements>
+		</recipeMaker>
+	</ThingDef>
+	
+	<ThingDef MayRequire="OskarPotocki.VanillaFactionsExpanded.Core" ParentName="BaseWeapon">
+		<defName>DA_MeleeWeapon_OgrokBanner</defName>
+		<label>ogrok great-banner</label>
+		<description>A large and heavy pike carrying the colors of the ogroks.</description>
+		<graphicData>
+			<texPath>Things/WeaponMelee/OgrokBanner</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>CutoutComplex</shaderType>
+			<drawSize>(2,2)</drawSize>
+		</graphicData>
+		<smeltable>true</smeltable>
+        <burnableByRecipe>true</burnableByRecipe>
+		<techLevel>Medieval</techLevel>
+		<equippedAngleOffset>45</equippedAngleOffset>
+		
+		<thingCategories>
+          <li>WeaponsMelee</li>
+        </thingCategories>
+
+		<statBases>
+			<WorkToMake>1000</WorkToMake>
+			<Mass>1.75</Mass>
+		</statBases>
+		
+		<weaponClasses>
+          <li>Melee</li>
+       </weaponClasses>
+
+		<costStuffCount>60</costStuffCount>
+		<stuffCategories>
+			<li>Metallic</li>
+		</stuffCategories>
+		<costList>
+			<WoodLog>30</WoodLog>
+		</costList>
+		
+	<equippedStatOffsets>
+        <ButcheryFleshSpeed>0.20</ButcheryFleshSpeed>
+        <ButcheryFleshEfficiency>0.15</ButcheryFleshEfficiency>
+	</equippedStatOffsets>
+
+		<weaponTags>
+			<li>OgrokBanner</li>
+		</weaponTags>
+
+		<tools>
+			<li>
+				<label>handle</label>
+				<capacities>
+					<li>Blunt</li>
+					<li>Poke</li>
+				</capacities>
+				<power>11</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+			<li>
+				<label>Point</label>
+				<capacities>
+					<li>Stab</li>
+				</capacities>
+				<power>25.45</power>
+				<cooldownTime>2.95</cooldownTime>
+				<armorPenetration>0.3</armorPenetration>
+			</li>
+		</tools>
+		
+			<modExtensions>
+		<li Class="VFECore.ThingDefExtension">
+			<weaponDraftedDrawOffsets>
+				<north>
+					<drawOffset>(0.34,0,0.60)</drawOffset>
+					<angleOffset>-143</angleOffset>
+				</north>
+				<east>
+					<drawOffset>(0.1,0,0.60)</drawOffset>
+					<angleOffset>-122</angleOffset>
+				</east>
+				<south>
+					<drawOffset>(-0.50,0,0.60)</drawOffset>
+					<angleOffset>-143</angleOffset>
+				</south>
+				<west>
+					<drawOffset>(-0.1,0,0.60)</drawOffset>
+					<angleOffset>122</angleOffset>
+				</west>
+			</weaponDraftedDrawOffsets>		
+		</li>
+	</modExtensions>
+		
+		
+	</ThingDef>  
+	
+  	<ThingDef ParentName="BaseMeleeWeapon_Sharp_Quality">
+		<defName>DA_MeleeWeapon_TwoHandedTenderizer</defName>
+		<label>two-handed tenderizer</label>
+		<description>A two-handed hammer with pyramid-shaped spikes protruding from its head. Used to soften the flesh and ease the cutting process.</description>
+		<graphicData>
+			<texPath>Things/WeaponMelee/TwoHandedTenderizer</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>CutoutComplex</shaderType>
+			<drawSize>(1.2,1.2)</drawSize>
+		</graphicData>
+		<techLevel>Medieval</techLevel>
+		<equippedAngleOffset>-45</equippedAngleOffset>
+
+		<statBases>
+			<WorkToMake>16000</WorkToMake>
+			<Mass>3.75</Mass>
+		</statBases>
+
+		<costStuffCount>80</costStuffCount>
+		<stuffCategories>
+			<li>Metallic</li>
+		</stuffCategories>
+		<costList>
+			<WoodLog>70</WoodLog>
+		</costList>
+
+		<weaponTags>
+			<li>MedievalMeleeDecent</li>
+			<li>OgrokMace</li>
+			<li MayRequire="DankPyon.Medieval.Overhauls">DankPyon_TwoHandedHammer</li>
+		</weaponTags>
+
+		<tools>
+			<li>
+				<label>shaft</label>
+				<capacities>
+					<li>Blunt</li>
+					<li>Poke</li>
+				</capacities>
+				<power>13</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+			<li>
+				<label>head</label>
+				<labelUsedInLogging>false</labelUsedInLogging>
+				<capacities>
+					<li>DA_Tenderized</li>
+				</capacities>
+				<power>27</power>
+				<cooldownTime>3.1</cooldownTime>
+				<armorPenetration>0.3</armorPenetration>
+			</li>
+		</tools>
+		<recipeMaker>
+			<researchPrerequisites>
+			 <li>Smithing</li>
+			 <li MayRequire="DankPyon.Medieval.Overhauls">DankPyon_MilitaryMaces</li>
+			</researchPrerequisites>
+			<skillRequirements>
+				<Crafting>7</Crafting>
+			</skillRequirements>
+		</recipeMaker>
+	</ThingDef>
+	
+  	<ThingDef ParentName="BaseMeleeWeapon_Sharp_Quality">
+		<defName>DA_MeleeWeapon_Tenderizer</defName>
+		<label>tenderizer</label>
+		<description>A hammer with pyramid-shaped spikes protruding from its head. Used to soften the flesh and ease the cutting process.</description>
+		<graphicData>
+			<texPath>Things/WeaponMelee/Tenderizer</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>CutoutComplex</shaderType>
+			<drawSize>(1.3,1.3)</drawSize>
+		</graphicData>
+		<techLevel>Medieval</techLevel>
+		<equippedAngleOffset>-45</equippedAngleOffset>
+
+		<statBases>
+			<WorkToMake>11000</WorkToMake>
+			<Mass>2</Mass>
+		</statBases>
+
+		<costStuffCount>80</costStuffCount>
+		<stuffCategories>
+			<li>Metallic</li>
+		</stuffCategories>
+		<costList>
+			<WoodLog>70</WoodLog>
+		</costList>
+
+		<weaponTags>
+			<li>MedievalMeleeDecent</li>
+			<li>OgrokMace</li>
+			<li MayRequire="DankPyon.Medieval.Overhauls">DankPyon_MilitaryMaces</li>
+		</weaponTags>
+
+		<tools>
+			<li>
+				<label>handle</label>
+				<capacities>
+					<li>Blunt</li>
+					<li>Poke</li>
+				</capacities>
+				<power>13</power>
+				<cooldownTime>2</cooldownTime>
+			</li>
+			<li>
+				<label>head</label>
+				<labelUsedInLogging>false</labelUsedInLogging>
+				<capacities>
+					<li>DA_Tenderized</li>
+				</capacities>
+				<power>17</power>
+				<cooldownTime>2.1</cooldownTime>
+				<armorPenetration>0.3</armorPenetration>
+			</li>
+		</tools>
+		<recipeMaker>
+			<researchPrerequisites>
+			 <li>Smithing</li>
+			 <li MayRequire="DankPyon.Medieval.Overhauls">DankPyon_MilitaryMaces</li>
+			</researchPrerequisites>
+			<skillRequirements>
+				<Crafting>7</Crafting>
+			</skillRequirements>
+		</recipeMaker>
+	</ThingDef>
+  
+</Defs>

@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+ <ThingDef ParentName="HatMakeableBase">
+    <defName>DA_GreatJaw</defName>
+    <label>great jaw</label>
+    <description>A large collar fashioned to ressemble a massive jaw. A display of strength and brutality.</description>
+    <graphicData>
+      <texPath>Things/Pawn/Humanlike/Headgear/GreatJaw/GreatJaw</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+	
+	<techLevel>Medieval</techLevel>
+	
+    <costStuffCount>25</costStuffCount>
+    <stuffCategories>
+      <li>Metallic</li>
+    </stuffCategories>
+	
+    <statBases>
+      <MaxHitPoints>120</MaxHitPoints>
+      <WorkToMake>1800</WorkToMake>
+      <Mass>0.5</Mass>
+      <StuffEffectMultiplierArmor>0.65</StuffEffectMultiplierArmor>
+      <StuffEffectMultiplierInsulation_Cold>0.00</StuffEffectMultiplierInsulation_Cold>
+      <StuffEffectMultiplierInsulation_Heat>0.00</StuffEffectMultiplierInsulation_Heat>
+      <EquipDelay>1.5</EquipDelay>
+    </statBases>
+	
+    <equippedStatOffsets>
+			<PainShockThreshold>0.10</PainShockThreshold>
+			<SocialImpact>0.10</SocialImpact>
+			<EatingSpeed>0.10</EatingSpeed>
+    </equippedStatOffsets>
+	
+    <recipeMaker>
+      <researchPrerequisite>Smithing</researchPrerequisite>
+      <recipeUsers>
+        <li>ElectricSmithy</li>
+        <li>FueledSmithy</li>
+      </recipeUsers>
+      <displayPriority>200</displayPriority>
+    </recipeMaker>
+	
+    <apparel>
+      <countsAsClothingForNudity>false</countsAsClothingForNudity>
+      <bodyPartGroups>
+        <li>Neck</li>
+      </bodyPartGroups>
+      <wornGraphicPaths>
+        <li>Things/Pawn/Humanlike/Headgear/GreatJaw/GreatJawA</li>
+        <li>Things/Pawn/Humanlike/Headgear/GreatJaw/GreatJawB</li>
+        <li>Things/Pawn/Humanlike/Headgear/GreatJaw/GreatJawC</li>
+      </wornGraphicPaths>
+      <layers>
+        <li>Overhead</li>
+      </layers>
+      <renderSkipFlags>
+        <li>Beard</li>
+      </renderSkipFlags>
+      <canBeGeneratedToSatisfyWarmth>false</canBeGeneratedToSatisfyWarmth>
+      <canBeGeneratedToSatisfyToxicEnvironmentResistance>false</canBeGeneratedToSatisfyToxicEnvironmentResistance>
+	 
+		
+      <drawData>
+        <defaultData>
+          <layer>71</layer>
+        </defaultData>
+      </drawData>
+    </apparel>
+  </ThingDef>
+  
+   <ThingDef ParentName="HatMakeableBase">
+    <defName>DA_HideousHood</defName>
+    <label>hideous hood</label>
+    <description>A large collar fashioned to ressemble a massive jaw. A display of strength and brutality.</description>
+    <graphicData>
+      <texPath>Things/Pawn/Humanlike/Headgear/HideousHood/HideousHood</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+	
+	<techLevel>Medieval</techLevel>
+	
+    <costStuffCount>25</costStuffCount>
+    <stuffCategories>
+      <li>Leathery</li>
+    </stuffCategories>
+	
+    <statBases>
+      <MaxHitPoints>100</MaxHitPoints>
+      <WorkToMake>800</WorkToMake>
+      <Mass>0.5</Mass>
+      <StuffEffectMultiplierArmor>0.30</StuffEffectMultiplierArmor>
+      <StuffEffectMultiplierInsulation_Cold>0.1</StuffEffectMultiplierInsulation_Cold>
+      <StuffEffectMultiplierInsulation_Heat>0.1</StuffEffectMultiplierInsulation_Heat>
+      <EquipDelay>1.5</EquipDelay>
+    </statBases>
+	
+    <equippedStatOffsets>
+			<PainShockThreshold>0.10</PainShockThreshold>
+			<SocialImpact>0.10</SocialImpact>
+    </equippedStatOffsets>
+	
+    <apparel>
+      <countsAsClothingForNudity>false</countsAsClothingForNudity>
+      <bodyPartGroups>
+        <li>UpperHead</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Things/Pawn/Humanlike/Headgear/HideousHood/HideousHood</wornGraphicPath>
+      <layers>
+        <li>Overhead</li>
+      </layers>
+      <renderSkipFlags>
+        <li>None</li>
+      </renderSkipFlags>
+      <canBeGeneratedToSatisfyWarmth>false</canBeGeneratedToSatisfyWarmth>
+      <canBeGeneratedToSatisfyToxicEnvironmentResistance>false</canBeGeneratedToSatisfyToxicEnvironmentResistance>
+      <drawData>
+        <defaultData>
+          <layer>60</layer>
+        </defaultData>
+      </drawData>
+    </apparel>
+    <recipeMaker>
+      <displayPriority>175</displayPriority>
+    </recipeMaker>
+  </ThingDef>
+
+   <ThingDef ParentName="HatMakeableBase">
+    <defName>DA_GreatToothedHelmet</defName>
+    <label>great denthelm</label>
+    <description>A crude bascinet with large metal teeth protruding from the top. A symbol of power and strength for the ogrok kinfolks.</description>
+    <graphicData>
+      <texPath>Things/Pawn/Humanlike/Headgear/GreatToothedHelm/GreatToothedHelm</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+	
+	<techLevel>Medieval</techLevel>
+	
+	<recipeMaker>
+		<skillRequirements>
+			<Crafting>8</Crafting>
+		</skillRequirements>
+      <recipeUsers>
+        <li>ElectricSmithy</li>
+        <li>FueledSmithy</li>
+      </recipeUsers>
+		<researchPrerequisite>PlateArmor</researchPrerequisite>
+	</recipeMaker>
+	
+    <costStuffCount>65</costStuffCount>
+    <stuffCategories>
+      <li>Metallic</li>
+    </stuffCategories>
+	
+    <statBases>
+      <MaxHitPoints>220</MaxHitPoints>
+      <WorkToMake>22000</WorkToMake>
+      <Mass>3.5</Mass>
+      <StuffEffectMultiplierArmor>1.04</StuffEffectMultiplierArmor>
+	   <StuffEffectMultiplierInsulation_Cold>0.15</StuffEffectMultiplierInsulation_Cold>
+	   <StuffEffectMultiplierInsulation_Heat>0.1</StuffEffectMultiplierInsulation_Heat>
+      <EquipDelay>1.5</EquipDelay>
+    </statBases>
+	
+    <equippedStatOffsets>
+	        <ShootingAccuracyPawn>-4</ShootingAccuracyPawn>
+			<PainShockThreshold>0.10</PainShockThreshold>
+			<SocialImpact>0.3</SocialImpact>
+    </equippedStatOffsets>
+	
+    <apparel>
+      <bodyPartGroups>
+        <li>UpperHead</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Things/Pawn/Humanlike/Headgear/GreatToothedHelm/GreatToothedHelm</wornGraphicPath>
+      <layers>
+        <li>Overhead</li>
+      </layers>
+      <renderSkipFlags>
+        <li>None</li>
+      </renderSkipFlags>
+      <canBeGeneratedToSatisfyWarmth>false</canBeGeneratedToSatisfyWarmth>
+      <canBeGeneratedToSatisfyToxicEnvironmentResistance>false</canBeGeneratedToSatisfyToxicEnvironmentResistance>
+      <drawData>
+        <defaultData>
+          <layer>70</layer>
+        </defaultData>
+      </drawData>
+    </apparel>
+  </ThingDef>
+  
+     <ThingDef ParentName="HatMakeableBase">
+    <defName>DA_ToothedHelmet</defName>
+    <label>denthelm</label>
+    <description>A crude helmet with large metal teeth protruding from the top. A symbol of power and strength for the ogrok kinfolks.</description>
+    <graphicData>
+      <texPath>Things/Pawn/Humanlike/Headgear/ToothedHelm/ToothedHelm</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+	
+	<techLevel>Medieval</techLevel>
+	
+	<recipeMaker>
+		<skillRequirements>
+			<Crafting>4</Crafting>
+		</skillRequirements>
+      <recipeUsers>
+        <li>ElectricSmithy</li>
+        <li>FueledSmithy</li>
+      </recipeUsers>
+		<researchPrerequisite>PlateArmor</researchPrerequisite>
+	</recipeMaker>
+	
+    <costStuffCount>35</costStuffCount>
+    <stuffCategories>
+      <li>Metallic</li>
+    </stuffCategories>
+	
+    <statBases>
+      <MaxHitPoints>200</MaxHitPoints>
+      <WorkToMake>22000</WorkToMake>
+      <Mass>2.5</Mass>
+      <StuffEffectMultiplierArmor>0.75</StuffEffectMultiplierArmor>
+	   <StuffEffectMultiplierInsulation_Cold>0.15</StuffEffectMultiplierInsulation_Cold>
+	   <StuffEffectMultiplierInsulation_Heat>0.1</StuffEffectMultiplierInsulation_Heat>
+      <EquipDelay>1.5</EquipDelay>
+    </statBases>
+	
+    <equippedStatOffsets>
+	        <ShootingAccuracyPawn>-1</ShootingAccuracyPawn>
+    </equippedStatOffsets>
+	
+    <apparel>
+      <bodyPartGroups>
+        <li>UpperHead</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Things/Pawn/Humanlike/Headgear/ToothedHelm/ToothedHelm</wornGraphicPath>
+      <layers>
+        <li>Overhead</li>
+      </layers>
+      <renderSkipFlags>
+        <li>None</li>
+      </renderSkipFlags>
+      <canBeGeneratedToSatisfyWarmth>false</canBeGeneratedToSatisfyWarmth>
+      <canBeGeneratedToSatisfyToxicEnvironmentResistance>false</canBeGeneratedToSatisfyToxicEnvironmentResistance>
+      <drawData>
+        <defaultData>
+          <layer>65</layer>
+        </defaultData>
+      </drawData>
+    </apparel>
+  </ThingDef>
+  
+       <ThingDef ParentName="HatMakeableBase">
+    <defName>DA_ToothedHelmetElite</defName>
+    <label>elite denthelm</label>
+    <description>A crude helmet with large metal teeth protruding from the top. A symbol of power and strength for the ogrok kinfolks. This one is often worn by the strongest of ogroks, providing extra protection and covering.</description>
+    <graphicData>
+      <texPath>Things/Pawn/Humanlike/Headgear/ToothedHelmElite/DenthelmElite</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+	  <shaderType>CutoutComplex</shaderType>
+    </graphicData>
+	
+	<techLevel>Medieval</techLevel>
+	
+	<recipeMaker>
+		<skillRequirements>
+			<Crafting>6</Crafting>
+		</skillRequirements>
+      <recipeUsers>
+        <li>ElectricSmithy</li>
+        <li>FueledSmithy</li>
+      </recipeUsers>
+		<researchPrerequisite>PlateArmor</researchPrerequisite>
+	</recipeMaker>
+	
+    <costStuffCount>35</costStuffCount>
+    <stuffCategories>
+      <li>Metallic</li>
+    </stuffCategories>
+	
+    <statBases>
+      <MaxHitPoints>200</MaxHitPoints>
+      <WorkToMake>22000</WorkToMake>
+      <Mass>2.5</Mass>
+      <StuffEffectMultiplierArmor>0.85</StuffEffectMultiplierArmor>
+	   <StuffEffectMultiplierInsulation_Cold>0.15</StuffEffectMultiplierInsulation_Cold>
+	   <StuffEffectMultiplierInsulation_Heat>0.1</StuffEffectMultiplierInsulation_Heat>
+      <EquipDelay>1.5</EquipDelay>
+    </statBases>
+	
+    <equippedStatOffsets>
+	        <ShootingAccuracyPawn>-1</ShootingAccuracyPawn>
+			<PainShockThreshold>0.2</PainShockThreshold>
+    </equippedStatOffsets>
+	
+    <apparel>
+      <bodyPartGroups>
+        <li>FullHead</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Things/Pawn/Humanlike/Headgear/ToothedHelmElite/DenthelmElite</wornGraphicPath>
+	  <useWornGraphicMask>true</useWornGraphicMask>
+      <layers>
+        <li>Overhead</li>
+      </layers>
+      <renderSkipFlags>
+        <li>None</li>
+      </renderSkipFlags>
+      <canBeGeneratedToSatisfyWarmth>false</canBeGeneratedToSatisfyWarmth>
+      <canBeGeneratedToSatisfyToxicEnvironmentResistance>false</canBeGeneratedToSatisfyToxicEnvironmentResistance>
+      <drawData>
+        <defaultData>
+          <layer>70</layer>
+        </defaultData>
+      </drawData>
+    </apparel>
+  </ThingDef>
+</Defs>

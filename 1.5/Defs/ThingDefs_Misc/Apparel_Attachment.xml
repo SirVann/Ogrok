@@ -1,0 +1,130 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<ThingDef ParentName="ArmorSmithableBase" Name="DA_ShellAttachmentBase" Abstract="True">
+		<apparel>
+			<drawData>
+				<dataNorth>
+					<layer>100</layer>
+				</dataNorth>
+				<dataEast>
+					<layer>75</layer>
+				</dataEast>
+				<dataSouth>
+					<layer>40</layer>
+				</dataSouth>
+				<dataWest>
+					<layer>75</layer>
+				</dataWest>
+			</drawData>
+			
+			<bodyPartGroups>
+				<li>Neck</li>
+				<li>Torso</li>
+				<li>Shoulders</li>
+			</bodyPartGroups>
+			
+			<layers>
+				<li>DA_ShellAttachment</li>
+			</layers>
+			<defaultOutfitTags>
+				<li>Soldier</li>
+			</defaultOutfitTags>
+		</apparel>
+		
+		<recipeMaker>
+			<recipeUsers Inherit="False"/>
+		</recipeMaker>
+		
+		<thingCategories>
+			<li>Apparel</li>
+		</thingCategories>
+		<techLevel>Medieval</techLevel>
+  		<tradeTags Inherit="false">
+         <li>Clothing</li>
+         <li>Armor</li>
+		</tradeTags>
+	</ThingDef>
+	
+		<ThingDef ParentName="DA_ShellAttachmentBase">
+		<defName>DA_Attachment_Furcoat</defName>
+		<label>furcoat</label>
+		<description>A warm and durable coat made from fur. Keeps the shoulders warm and the neck straight.</description>
+		
+		<graphicData>
+			<texPath>Things/Pawn/Humanlike/Apparel/Furcoat/Furcoat</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		
+        <stuffCategories>
+		   <li>Fabric</li>
+         </stuffCategories>
+        <costStuffCount>60</costStuffCount>
+		
+       <recipeMaker>
+        <recipeUsers>
+          <li>CraftingSpot</li>
+          <li>ElectricTailoringBench</li>
+         <li>HandTailoringBench</li>
+         </recipeUsers>
+         <displayPriority>160</displayPriority>
+       </recipeMaker>
+		
+		<statBases>
+			<MaxHitPoints>100</MaxHitPoints>
+			<Mass>4</Mass>
+			<EquipDelay>2</EquipDelay>
+			<Insulation_Cold>2</Insulation_Cold>
+		</statBases>
+		
+		<equippedStatOffsets>
+			<SocialImpact>0.10</SocialImpact>
+			<SlaveSuppressionOffset MayRequire="Ludeon.RimWorld.Ideology">-0.05</SlaveSuppressionOffset>
+		</equippedStatOffsets>
+		
+		<apparel>
+			
+			<wornGraphicPath>Things/Pawn/Humanlike/Apparel/Furcoat/Furcoat</wornGraphicPath>
+			<useWornGraphicMask>false</useWornGraphicMask>
+		</apparel>
+	</ThingDef>
+	
+	
+	
+			<ThingDef ParentName="DA_ShellAttachmentBase">
+		<defName>DA_Attachment_SpikedPauldrons</defName>
+		<label>toothed pauldrons</label>
+		<description>Large metal pauldrons fashioned to ressemble a set of teeth.</description>
+		
+		<graphicData>
+			<texPath>Things/Pawn/Humanlike/Apparel/SpikedPauldrons/SpikedPauldrons</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		
+        <stuffCategories>
+           <li>Metallic</li>
+         </stuffCategories>
+        <costStuffCount>50</costStuffCount>
+		
+       <recipeMaker>
+        <recipeUsers>
+        <li>ElectricSmithy</li>
+        <li>FueledSmithy</li>
+         </recipeUsers>
+         <displayPriority>160</displayPriority>
+       </recipeMaker>
+		
+		<statBases>
+			<MarketValue>450</MarketValue>
+			<MaxHitPoints>150</MaxHitPoints>
+			<Mass>3</Mass>
+			<EquipDelay>2</EquipDelay>
+			<StuffEffectMultiplierArmor>0.3</StuffEffectMultiplierArmor>
+			<Insulation_Cold>2</Insulation_Cold>
+		</statBases>
+		
+		<apparel>
+			<wornGraphicPath>Things/Pawn/Humanlike/Apparel/SpikedPauldrons/SpikedPauldrons</wornGraphicPath>
+			<useWornGraphicMask>false</useWornGraphicMask>
+		</apparel>
+	</ThingDef>
+</Defs>

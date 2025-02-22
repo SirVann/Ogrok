@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Patch>
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Vanilla Expanded Framework</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+			<operations>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs</xpath>
+					<order>Append</order>
+					<value>
+                     	<GeneDef>
+                    		<defName>DA_Gigantism</defName>
+                    		<label>gigantism</label>
+                    		<description>Carriers of this gene are afflicted by gigantism and are larger than most.</description>
+                       		<iconPath>UI/Genes/Gene_Gigantism</iconPath>
+                               <exclusionTags>
+                                <li>AG_BodySize</li>
+                                <li>Size</li>
+                            </exclusionTags>
+                   		    <statFactors>
+                			    <Mass>1.2</Mass>
+                                <MeatAmount>1.2</MeatAmount>
+                                <LeatherAmount>1.2</LeatherAmount>
+								<VEF_CosmeticBodySize_Multiplier>1.3</VEF_CosmeticBodySize_Multiplier>
+                 		    </statFactors>
+                 		    <displayOrderInCategory>0</displayOrderInCategory>
+                		    <biostatCpx>1</biostatCpx>
+                 		    <biostatMet>0</biostatMet>		
+                		    <selectionWeight>0</selectionWeight>
+	                    </GeneDef>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/XenotypeDef[defName='DA_Ogrok']/genes</xpath>
+					<order>Append</order>
+					<value>
+						<li>DA_Gigantism</li>
+					</value>
+				</li>				
+			</operations>
+		</match>
+	</Operation>
+	
+</Patch>

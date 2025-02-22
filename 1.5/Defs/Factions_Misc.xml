@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+<FactionDef ParentName="PirateBandBase">
+    <defName>DA_OgrokClan</defName>
+    <label>ogrok stronghold</label>
+    <description>An ancient fort taken over by ogroks which serves as their stronghold. Unified under the guidance of their tribalistic deity, the ogrok clans are known to raid, pillage and ravage the lands with barbarous strength fueled by their never-ending hunger for more.</description>
+    <factionIconPath>UI/OgrokStronghold</factionIconPath>
+    <factionNameMaker>DA_NamerFactionOgrok</factionNameMaker>
+    <settlementNameMaker>DA_NamerSettlementOgrok</settlementNameMaker>
+    <pawnSingular>ogrok</pawnSingular>
+    <pawnsPlural>ogroks</pawnsPlural>
+    <leaderTitle>meat-baron</leaderTitle>
+	<canSiege>false</canSiege>
+	<techLevel>Medieval</techLevel>
+	<allowedCultures><li>DA_Grogorok</li></allowedCultures>	
+
+    <fixedLeaderKinds>
+      <li>DA_OgrokChampion</li>
+    </fixedLeaderKinds>
+    <permanentEnemy>true</permanentEnemy>
+    <permanentEnemyToEveryoneExceptPlayer>true</permanentEnemyToEveryoneExceptPlayer>
+	<xenotypeSet Inherit="False">
+      <xenotypeChances>
+		<DA_Ogrok>30</DA_Ogrok>
+      </xenotypeChances>
+	 </xenotypeSet>
+
+    <colorSpectrum Inherit="False">
+      <li>(198, 86, 86)</li>
+    </colorSpectrum>
+
+    <fixedIdeo>true</fixedIdeo>
+    <ideoName>Path of Vakrog</ideoName>
+    <ideoDescription>Vakrog, the great teethed one, he who shall devour the very stars. To quench his never-ending hunger we must eat and gorge upon the world. We must hunger for more, always.</ideoDescription>
+    <hiddenIdeo>false</hiddenIdeo>
+    <deityPresets>
+      <li>
+        <nameType>
+          <name>Vakrog</name><type>Hungering One</type>
+        </nameType>
+        <gender>Male</gender>
+        <iconPath>UI/DeityOgrok</iconPath>
+      </li>
+    </deityPresets>
+    <forcedMemes>
+	  <li MayRequire="Ludeon.RimWorld.Ideology">Cannibal</li>
+    </forcedMemes>
+    <allowedMemes>
+      <li MayRequire="Ludeon.RimWorld.Ideology">Collectivist</li>
+      <li MayRequire="Ludeon.RimWorld.Ideology">Loyalist</li>
+      <li MayRequire="Ludeon.RimWorld.Ideology">HumanPrimacy</li>
+      <li MayRequire="Ludeon.RimWorld.Ideology">MaleSupremacy</li>
+    </allowedMemes>
+    <disallowedPrecepts>
+      <li MayRequire="Ludeon.RimWorld.Ideology">ApparelDesired_Strong_Subordinate</li> 
+      <li MayRequire="Ludeon.RimWorld.Ideology">ApparelDesired_Soft_Subordinate</li>
+
+      <li>Slavery_Classic</li>
+      <li MayRequire="Ludeon.RimWorld.Ideology">Slavery_Disapproved</li>
+      <li MayRequire="Ludeon.RimWorld.Ideology">Slavery_Horrible</li>
+      <li MayRequire="Ludeon.RimWorld.Ideology">Slavery_Abhorrent</li>
+
+      <li MayRequire="Ludeon.RimWorld.Ideology">IdeoDiversity_Exalted</li>
+      <li MayRequire="Ludeon.RimWorld.Ideology">IdeoDiversity_Respected</li>
+      <li MayRequire="Ludeon.RimWorld.Ideology">IdeoDiversity_Approved</li>
+      <li MayRequire="Ludeon.RimWorld.Ideology">IdeoDiversity_Standard</li>
+
+      <li MayRequire="Ludeon.RimWorld.Ideology">Scarification_Minor</li>
+      <li MayRequire="Ludeon.RimWorld.Ideology">Scarification_Heavy</li>
+    </disallowedPrecepts>
+    <maxPawnCostPerTotalPointsCurve>
+      <points>
+        <li>(500, 100)</li>
+        <li>(1000, 150)</li>
+        <li>(2000, 250)</li>
+        <li>(2001, 10000)</li>
+      </points>
+    </maxPawnCostPerTotalPointsCurve>
+    <pawnGroupMakers Inherit="False">
+
+      <li>
+        <!-- Normal fights -->
+        <kindDef>Combat</kindDef>
+        <commonality>100</commonality>
+        <options>
+          <DA_OgrokRaider>15</DA_OgrokRaider>
+		  <DA_OgrokLooter>10</DA_OgrokLooter>
+		  <DankPyon_Medieval_MercenaryHeavy MayRequire="DankPyon.Medieval.Overhauls">7</DankPyon_Medieval_MercenaryHeavy>
+		  <DankPyon_BrigandThug MayRequire="DankPyon.Medieval.Overhauls">5</DankPyon_BrigandThug>
+		  <DankPyon_BrigandRaider MayRequire="DankPyon.Medieval.Overhauls">5</DankPyon_BrigandRaider>
+          <DA_OgrokSlaughterer>3</DA_OgrokSlaughterer>
+		  <DA_MeatStarvedOgrok>0.8</DA_MeatStarvedOgrok>
+		  <DA_OgrokBannerBearer MayRequire="OskarPotocki.VanillaFactionsExpanded.Core">2</DA_OgrokBannerBearer>
+          <Warg>10</Warg>
+        </options>
+      </li>
+      <li>
+        <!-- Breach -->
+        <kindDef>Combat</kindDef>
+        <commonality>90</commonality>
+        <options>
+          <DA_OgrokRaider>15</DA_OgrokRaider>
+		  <DA_OgrokBreacher>5</DA_OgrokBreacher>
+		  <DA_OgrokLooter>10</DA_OgrokLooter>
+          <DA_OgrokSlaughterer>3</DA_OgrokSlaughterer>
+		  <DA_MeatStarvedOgrok>0.8</DA_MeatStarvedOgrok>
+		  <DA_OgrokBannerBearer MayRequire="OskarPotocki.VanillaFactionsExpanded.Core">2</DA_OgrokBannerBearer>
+          <Warg>10</Warg>
+        </options>
+      </li>
+	  <li>
+        <!-- Elite fight -->
+        <kindDef>Combat</kindDef>
+        <commonality>40</commonality>
+        <options>
+          <DA_OgrokRaider>12</DA_OgrokRaider>
+		  <DankPyon_Medieval_MercenaryHeavy MayRequire="DankPyon.Medieval.Overhauls">7</DankPyon_Medieval_MercenaryHeavy>
+		  <DankPyon_BrigandLeader MayRequire="DankPyon.Medieval.Overhauls">5</DankPyon_BrigandLeader>
+		  <DA_OgrokLooter>10</DA_OgrokLooter>
+          <DA_OgrokSlaughterer>8</DA_OgrokSlaughterer>
+		  <DA_OgrokBannerBearer MayRequire="OskarPotocki.VanillaFactionsExpanded.Core">2</DA_OgrokBannerBearer>
+          <DA_OgrokChampion>5</DA_OgrokChampion>
+		  <DA_OgrokHeadChopper>8</DA_OgrokHeadChopper>
+          <Warg>5</Warg>
+        </options>
+      </li>
+	  
+	  <li>
+        <!-- Rare -->
+        <kindDef>Combat</kindDef>
+        <commonality>3</commonality>
+        <options>
+		  <DA_OgrokHeadChopper>10</DA_OgrokHeadChopper>
+        </options>
+      </li>
+
+      <li>
+        <!-- Base defense -->
+        <kindDef>Settlement</kindDef>
+        <options>
+          <DA_OgrokRaider>15</DA_OgrokRaider>
+		  <DA_OgrokLooter>10</DA_OgrokLooter>
+          <DA_OgrokSlaughterer>3</DA_OgrokSlaughterer>
+		  <DA_OgrokHeadChopper>8</DA_OgrokHeadChopper>
+		  <DA_MeatStarvedOgrok>0.8</DA_MeatStarvedOgrok>
+		  <DA_OgrokBannerBearer MayRequire="OskarPotocki.VanillaFactionsExpanded.Core">0.5</DA_OgrokBannerBearer>
+          <Warg>10</Warg>
+        </options>
+      </li>
+      <li MayRequire="Ludeon.RimWorld.Ideology">
+        <kindDef>Miners</kindDef>
+        <commonality>1</commonality>
+        <options>
+		  <DA_OgrokRaider>3</DA_OgrokRaider>
+          <Tribal_Miner>1</Tribal_Miner>
+        </options>
+      </li>
+      <li MayRequire="Ludeon.RimWorld.Ideology">
+        <kindDef>Hunters</kindDef>
+        <commonality>1</commonality>
+        <options>
+		  <DA_OgrokRaider>3</DA_OgrokRaider>
+          <Tribal_Hunter>1</Tribal_Hunter>
+        </options>
+      </li>
+      <li MayRequire="Ludeon.RimWorld.Ideology">
+        <kindDef>Loggers</kindDef>
+        <commonality>1</commonality>
+        <options>
+		  <DA_OgrokRaider>3</DA_OgrokRaider>
+          <Tribal_Logger>1</Tribal_Logger>
+        </options>
+      </li>
+      <li MayRequire="Ludeon.RimWorld.Ideology">
+        <kindDef>Farmers</kindDef>
+        <commonality>1</commonality>
+        <options>
+		  <DA_OgrokRaider>3</DA_OgrokRaider>
+          <Tribal_Farmer>1</Tribal_Farmer>
+        </options>
+      </li>
+    </pawnGroupMakers>
+  </FactionDef>
+
+</Defs>

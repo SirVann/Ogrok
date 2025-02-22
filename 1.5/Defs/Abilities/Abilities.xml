@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+
+  <!-- VFX -->
+  <ThingDef ParentName="MoteBase">
+    <defName>DA_HookChain</defName>
+    <thingClass>MoteDualAttached</thingClass>
+    <altitudeLayer>MoteLow</altitudeLayer>
+    <mote>
+      <fadeInTime>0.1</fadeInTime>
+      <fadeOutTime>0.1</fadeOutTime>
+      <solidTime>999999</solidTime>
+      <needsMaintenance>True</needsMaintenance>
+      <rotateTowardsTarget>True</rotateTowardsTarget>
+      <scaleToConnectTargets>True</scaleToConnectTargets>
+    </mote>
+    <graphicData>
+      <shaderType>Mote</shaderType>
+      <texPath>Things/Mote/Chain</texPath>
+    </graphicData>
+  </ThingDef>
+
+  <!-- Ability -->
+  <AbilityDef>
+    <defName>DA_ChainPull</defName>
+    <label>chain pull</label>
+    <description>Launch the chain at a target to stun and drag them in melee range.</description>
+    <iconPath>UI/Abilities/ChainPull</iconPath>
+    <displayGizmoWhileUndrafted>false</displayGizmoWhileUndrafted>
+    <disableGizmoWhileUndrafted>true</disableGizmoWhileUndrafted>
+    <hostile>false</hostile>
+    <casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+    <ai_IsOffensive>true</ai_IsOffensive>
+    <aiCanUse>true</aiCanUse>
+    <statBases>
+      <Ability_Duration>2</Ability_Duration>
+    </statBases>
+    <cooldownTicksRange>30000</cooldownTicksRange>
+	  <targetRequired>true</targetRequired>
+    <verbProperties>
+      <verbClass>Verb_CastAbility</verbClass>
+      <range>16</range>
+	  <minRange>3</minRange>
+      <warmupTime>1.2</warmupTime>
+      <requireLineOfSight>true</requireLineOfSight>
+      <forceNormalTimeSpeed>false</forceNormalTimeSpeed>
+      <soundCast>DA_ChainPull</soundCast>
+      <targetParams>
+        <canTargetPawns>true</canTargetPawns>
+        <canTargetSelf>false</canTargetSelf>
+        <canTargetBuildings>false</canTargetBuildings>
+        <canTargetCorpses>false</canTargetCorpses>
+        <canTargetAnimals>true</canTargetAnimals>
+        <canTargetHumans>true</canTargetHumans>
+        <canTargetMechs>true</canTargetMechs>
+        <canTargetMutants>true</canTargetMutants>
+        <neverTargetIncapacitated>false</neverTargetIncapacitated>
+      </targetParams>
+    </verbProperties>
+    <comps>
+      <li Class = "CompProperties_AbilityEffectWithDuration">
+        <compClass>CompAbilityEffect_Stun</compClass>
+      </li>
+     <li Class="EBSGFramework.CompProperties_AbilityWithCooldown">
+        <cooldownTicks>120</cooldownTicks>
+      </li>
+      <li Class="EBSGFramework.CompProperties_CreateLinkedHediff">
+        <targetHediffOnBrain>false</targetHediffOnBrain>
+        <hediffOnTarget>DA_Chain</hediffOnTarget>
+      </li>
+      <li Class="EBSGFramework.CompProperties_AbilityPushTarget">
+        <range>16</range>
+        <flyWithCarriedThing>false</flyWithCarriedThing>
+        <destination>Caster</destination>
+        <maxBodySize>1.4</maxBodySize>
+        <successChance>
+          <baseSuccessChance>0.85</baseSuccessChance>
+          <casterStatChance>ShootingAccuracyPawn</casterStatChance>
+          <targetStatChance>MeleeDodgeChance</targetStatChance>
+          <targetStatEffect>OneMinusMultiply</targetStatEffect>
+        </successChance>
+      </li>
+    </comps>
+  </AbilityDef>
+
+  <HediffDef>
+    <hediffClass>HediffWithTarget</hediffClass>
+    <defName>DA_Chain</defName>
+    <label>chain</label>
+    <description>You shouldn't be able to read this outside devmode.</description>
+    <isBad>false</isBad>
+    <scenarioCanAdd>false</scenarioCanAdd>
+    <everCurableByItem>false</everCurableByItem>
+    <initialSeverity>1</initialSeverity>
+    <maxSeverity>1</maxSeverity>
+    <comps>
+	  <li Class="EBSGFramework.HediffCompProperties_DamageOnRemoval">
+	    <damage>Cut</damage>
+		<amount>6</amount>
+		<createFilth>true</createFilth>
+		<bodyParts>
+		 <li>Torso</li>
+		 <li>Body</li>
+		</bodyParts>
+	  </li>
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>120</disappearsAfterTicks>
+      </li>
+      <li Class="HediffCompProperties_DisappearsOnDeath"/>
+      <li Class="HediffCompProperties_Link">
+        <requireLinkOnOtherPawn>false</requireLinkOnOtherPawn>
+        <maxDistance>17</maxDistance>
+        <customMote>DA_HookChain</customMote>
+      </li>
+    </comps>
+  </HediffDef>
+
+</Defs>

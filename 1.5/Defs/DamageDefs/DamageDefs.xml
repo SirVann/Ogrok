@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	
+	<DamageDef ParentName="BluntBase">
+		<defName>DA_Tenderized</defName>
+		<label>tenderized</label>
+		
+		<externalViolence>true</externalViolence>
+		<deathMessage>{0} has been hammered to death.</deathMessage>
+		<hediff>Crush</hediff>
+		<workerClass>DamageWorker_Blunt</workerClass>
+		<hediffSolid>Crack</hediffSolid>
+		<additionalHediffs>
+			<li>
+				<hediff>DA_Tenderized</hediff>
+				<severityPerDamageDealt>0.5</severityPerDamageDealt>
+				<victimSeverityScaling>IncomingDamageFactor</victimSeverityScaling>
+			</li>
+			
+		</additionalHediffs>
+	</DamageDef>
+	
+  	<HediffDef>
+    <defName>DA_Tenderized</defName>
+    <label>tenderized</label>
+    <description>Weakened by a meat tenderizer.</description>
+	<hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(214,197,77)</defaultLabelColor>
+    <maxSeverity>0.5</maxSeverity>
+    <isBad>true</isBad>
+	
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>-10.0</severityPerDay>
+        <showHoursToRecover>true</showHoursToRecover>
+      </li>
+    </comps>
+      <stages>
+        <li>
+          <statFactors>
+            <IncomingDamageFactor>1.1</IncomingDamageFactor>
+          </statFactors>
+        </li>
+      </stages>
+  </HediffDef>
+	
+	<ManeuverDef>
+		<defName>DA_Tenderized</defName>
+		<requiredCapacity>DA_Tenderized</requiredCapacity>
+		<verb>
+			<verbClass>Verb_MeleeAttackDamage</verbClass>
+			<meleeDamageDef>DA_Tenderized</meleeDamageDef>
+		</verb>
+		<logEntryDef>MeleeAttack</logEntryDef>
+		<combatLogRulesHit>Maneuver_Stab_MeleeHit</combatLogRulesHit>
+		<combatLogRulesDeflect>Maneuver_Stab_MeleeDeflect</combatLogRulesDeflect>
+		<combatLogRulesMiss>Maneuver_Stab_MeleeMiss</combatLogRulesMiss>
+		<combatLogRulesDodge>Maneuver_Stab_MeleeDodge</combatLogRulesDodge>
+	</ManeuverDef>
+	
+	<ToolCapacityDef>
+		<defName>DA_Tenderized</defName>
+		<label>tenderized</label>
+	</ToolCapacityDef>
+	
+</Defs>

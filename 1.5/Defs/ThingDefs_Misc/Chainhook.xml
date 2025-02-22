@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<ThingDef ParentName="ApparelNoQualityBase">
+		<defName>DA_Utility_ChainHook</defName>
+		<label>chain-hook</label>
+		<description>A long and heavy steel chain attached to the waist with a sharp hook at the end. Can be used to drag someone from a distance and bring them near.</description>
+		<techLevel>Medieval</techLevel>
+		
+		<graphicData>
+			<texPath>Things/Utility/Chainhook</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<tickerType>Normal</tickerType>
+		
+		<statBases>
+			<Mass>4</Mass>
+			<Flammability>0.4</Flammability>
+			<EquipDelay>2</EquipDelay>
+		</statBases>
+		
+        <costList>
+          <Steel>80</Steel>  
+        </costList>
+		
+		<thingCategories>
+			<li>ApparelUtility</li>
+		</thingCategories>
+		
+		<generateAllowChance>0.15</generateAllowChance>
+		<apparel>
+			<careIfWornByCorpse>false</careIfWornByCorpse>
+			<careIfDamaged>false</careIfDamaged>
+			<wearPerDay>0</wearPerDay>
+			
+			<bodyPartGroups>
+				<li>Waist</li>
+			</bodyPartGroups>
+			<layers>
+				<li>Belt</li>
+			</layers>
+		</apparel>
+		
+        <comps>
+            <li Class="EBSGFramework.CompProperties_EquippableAbility">
+                <ability>DA_ChainPull</ability>
+            </li>
+        </comps>
+	</ThingDef>
+  
+	
+</Defs>

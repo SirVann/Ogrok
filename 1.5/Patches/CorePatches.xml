@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>Defs/ThinkTreeDef[defName = "HumanlikeConstant"]/thinkRoot/subNodes</xpath>
+      <value>
+        <li Class="ThinkNode_ConditionalColonist">
+          <invert>true</invert>
+          <subNodes>
+
+            <!-- Hook -->
+            <li Class="ThinkNode_ConditionalCanDoConstantThinkTreeJobNow">
+              <subNodes>
+                <li Class="ThinkNode_ConditionalHashIntervalTick">
+                  <interval>60</interval>
+                  <subNodes>
+                    <li Class="ThinkNode_ConditionalHasAbility">
+                      <ability>DA_ChainPull</ability>
+                      <subNodes>
+                        <li Class="ThinkNode_ConditionalAbilityCastLastTick">
+                          <ability>DA_ChainPull</ability>
+                          <minTicksAgo>180</minTicksAgo>
+                          <subNodes>
+                            <li Class="EBSGFramework.ThinkNode_ConditionalTooManyNearbyThreats">
+                              <dangerRadius>15</dangerRadius>
+                              <minCount>1</minCount>
+                              <subNodes>
+                                <li Class="EBSGFramework.ThinkNode_ConditionalValidTargetForAbility">
+                                  <ability>DA_ChainPull</ability>
+                                  <onlyHostiles>True</onlyHostiles>
+                                  <onlyInFaction>False</onlyInFaction>
+                                  <subNodes>
+                                    <li Class="EBSGFramework.JobGiver_AICastAnyOfAbilityOnEnemyTarget">
+                                      <abilities>
+                                        <li>DA_ChainPull</li>
+                                      </abilities>
+                                    </li>
+                                  </subNodes>
+                                </li>
+                              </subNodes>
+                            </li>
+                          </subNodes>
+                        </li>
+                      </subNodes>
+                    </li>
+                  </subNodes>
+                </li>
+              </subNodes>
+            </li>
+            
+          </subNodes>
+        </li>
+      </value>
+  </Operation>
+  
+</Patch>
