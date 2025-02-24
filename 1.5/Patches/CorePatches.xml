@@ -47,6 +47,27 @@
                 </li>
               </subNodes>
             </li>
+
+            <li Class="ThinkNode_ConditionalHasHediff">
+              <hediff>DA_ChainFrenzy</hediff>
+              <subNodes>
+                <li Class="ThinkNode_ConditionalCanDoConstantThinkTreeJobNow">
+                  <subNodes>
+                    <li Class="JobGiver_AIFightEnemies">
+                      <targetAcquireRadius>45</targetAcquireRadius>
+                      <targetKeepRadius>55</targetKeepRadius>
+                    </li>
+                    <li Class="JobGiver_AITrashColonyClose" />
+                    <li Class="JobGiver_AITrashBuildingsDistant" />
+                    <li Class="JobGiver_AIGotoNearestHostile" />
+                    <li Class="JobGiver_AITrashBuildingsDistant">
+                      <attackAllInert>true</attackAllInert>
+                    </li>
+                    <li Class="JobGiver_WanderAnywhere" />
+                  </subNodes>
+                </li>
+              </subNodes>
+            </li>
             
           </subNodes>
         </li>

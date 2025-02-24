@@ -67,6 +67,7 @@
       </li>
       <li Class="EBSGFramework.CompProperties_CreateLinkedHediff">
         <targetHediffOnBrain>false</targetHediffOnBrain>
+        <hediffOnCaster>DA_ChainFrenzy</hediffOnCaster> <!-- A flag for thee thinktree to stop the AI from having dementia about the hooked victim -->
         <hediffOnTarget>DA_Chain</hediffOnTarget>
       </li>
       <li Class="EBSGFramework.CompProperties_AbilityPushTarget">
@@ -114,6 +115,28 @@
         <customMote>DA_HookChain</customMote>
       </li>
     </comps>
+  </HediffDef>
+
+  <HediffDef>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defName>DA_ChainFrenzy</defName>
+    <label>chain frenzy</label>
+    <description>You shouldn't be able to read this outside devmode.</description>
+    <isBad>false</isBad>
+    <everCurableByItem>false</everCurableByItem>
+    <scenarioCanAdd>false</scenarioCanAdd>
+    <initialSeverity>1</initialSeverity>
+    <comps>
+      <li Class="HediffCompProperties_DisappearsOnDeath"/>
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>240</disappearsAfterTicks>
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <becomeVisible>false</becomeVisible>
+      </li>
+    </stages>
   </HediffDef>
 
 </Defs>
