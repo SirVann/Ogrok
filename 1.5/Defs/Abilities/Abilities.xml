@@ -43,6 +43,7 @@
       <range>16</range>
 	  <minRange>3</minRange>
       <warmupTime>1.2</warmupTime>
+      <defaultCooldownTime>2</defaultCooldownTime>
       <requireLineOfSight>true</requireLineOfSight>
       <forceNormalTimeSpeed>false</forceNormalTimeSpeed>
       <soundCast>DA_ChainPull</soundCast>
@@ -61,9 +62,6 @@
     <comps>
       <li Class = "CompProperties_AbilityEffectWithDuration">
         <compClass>CompAbilityEffect_Stun</compClass>
-      </li>
-     <li Class="EBSGFramework.CompProperties_AbilityWithCooldown">
-        <cooldownTicks>120</cooldownTicks>
       </li>
       <li Class="EBSGFramework.CompProperties_CreateLinkedHediff">
         <targetHediffOnBrain>false</targetHediffOnBrain>
